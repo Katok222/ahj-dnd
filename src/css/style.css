@@ -103,3 +103,28 @@ body {
 .hidden {
   display: none;
 }
+
+.card {
+  position: relative;
+}
+
+.card__delete {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  font-size: 14px;
+}
+
+.card:hover .card__delete {
+  display: block;
+}
+
+.card-placeholder {
+  background: rgba(9, 30, 66, 0.13);
+  border-radius: 3px;
+  margin-bottom: 8px;
+}

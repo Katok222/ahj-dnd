@@ -34,6 +34,7 @@ function renderCard(card) {
   return `
     <div class="card" data-card-id="${card.id}">
       <div class="card__text">${escapeHtml(card.text)}</div>
+      <button class="card__delete" type="button">✕</button>
     </div>
   `;
 }
