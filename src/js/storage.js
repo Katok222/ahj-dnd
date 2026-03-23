@@ -11,11 +11,20 @@ export function loadState() {
 
   try {
     return JSON.parse(raw);
-  } catch (e) {
+  } catch (error) {
+    console.error('Failed to parse saved state:', error);
+
     return structuredClone(defaultState);
   }
 }
 
 export function saveState(state) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(state)
+    );
+  } catch (error) {
+    console.error('Failed to save state:', error);
+  }
 }

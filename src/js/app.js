@@ -9,6 +9,8 @@ const state = loadState();
 
 function rerender() {
   renderBoard(state);
+
+  // после каждого render нужно заново навесить события
   initAddCard(state, rerenderWithSave);
   initDeleteCard(state, rerenderWithSave);
   initDragAndDrop(state, rerenderWithSave);
@@ -19,4 +21,8 @@ function rerenderWithSave() {
   rerender();
 }
 
-rerender();
+function init() {
+  rerender();
+}
+
+document.addEventListener('DOMContentLoaded', init);

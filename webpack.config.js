@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/js/app.js',
   output: {
-    filename: 'main.[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: '/ahj-dnd/',
+  filename: 'main.[contenthash].js',
+  path: path.resolve(__dirname, 'dist'),
+  clean: true,
+  publicPath: '/ahj-dnd/',
   },
   devServer: {
     static: './dist',
